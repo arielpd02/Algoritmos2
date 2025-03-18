@@ -1,0 +1,371 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="solucion"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="C:/Users/Ariel/Desktop/UBA/Algortimos 2/Taller/AyED2-Labo04-Compilacion-Member_classes-Testing/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="C:/PROGRA~1/JETBRA~1/CLION2~1.1/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/Ariel/Desktop/UBA/Algortimos 2/Taller/AyED2-Labo04-Compilacion-Member_classes-Testing/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="C:/PROGRA~1/JETBRA~1/CLION2~1.1/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/Ariel/Desktop/UBA/Algortimos 2/Taller/AyED2-Labo04-Compilacion-Member_classes-Testing/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/JETBRA~1/CLION2~1.1/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/Ariel/Desktop/UBA/Algortimos 2/Taller/AyED2-Labo04-Compilacion-Member_classes-Testing/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/JETBRA~1/CLION2~1.1/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/Ariel/Desktop/UBA/Algortimos 2/Taller/AyED2-Labo04-Compilacion-Member_classes-Testing/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="gtest">
+				<Option output="C:/Users/Ariel/Desktop/UBA/Algortimos 2/Taller/AyED2-Labo04-Compilacion-Member_classes-Testing/cmake-build-debug/libgtest.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/Ariel/Desktop/UBA/Algortimos 2/Taller/AyED2-Labo04-Compilacion-Member_classes-Testing/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="C:/Program Files/JetBrains/CLion 2022.2.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2022.2.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/x86_64-w64-mingw32"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2022.2.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/backward"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2022.2.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2022.2.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../include"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2022.2.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include-fixed"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2022.2.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/include"/>
+					<Add directory="/mingw/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/PROGRA~1/JETBRA~1/CLION2~1.1/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/Ariel/Desktop/UBA/Algortimos 2/Taller/AyED2-Labo04-Compilacion-Member_classes-Testing/cmake-build-debug/Makefile&quot;  VERBOSE=1 gtest"/>
+					<CompileFile command="C:/PROGRA~1/JETBRA~1/CLION2~1.1/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/Ariel/Desktop/UBA/Algortimos 2/Taller/AyED2-Labo04-Compilacion-Member_classes-Testing/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/JETBRA~1/CLION2~1.1/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/Ariel/Desktop/UBA/Algortimos 2/Taller/AyED2-Labo04-Compilacion-Member_classes-Testing/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/JETBRA~1/CLION2~1.1/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/Ariel/Desktop/UBA/Algortimos 2/Taller/AyED2-Labo04-Compilacion-Member_classes-Testing/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="gtest/fast">
+				<Option output="C:/Users/Ariel/Desktop/UBA/Algortimos 2/Taller/AyED2-Labo04-Compilacion-Member_classes-Testing/cmake-build-debug/libgtest.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/Ariel/Desktop/UBA/Algortimos 2/Taller/AyED2-Labo04-Compilacion-Member_classes-Testing/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="C:/Program Files/JetBrains/CLion 2022.2.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2022.2.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/x86_64-w64-mingw32"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2022.2.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/backward"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2022.2.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2022.2.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../include"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2022.2.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include-fixed"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2022.2.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/include"/>
+					<Add directory="/mingw/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/PROGRA~1/JETBRA~1/CLION2~1.1/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/Ariel/Desktop/UBA/Algortimos 2/Taller/AyED2-Labo04-Compilacion-Member_classes-Testing/cmake-build-debug/Makefile&quot;  VERBOSE=1 gtest/fast"/>
+					<CompileFile command="C:/PROGRA~1/JETBRA~1/CLION2~1.1/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/Ariel/Desktop/UBA/Algortimos 2/Taller/AyED2-Labo04-Compilacion-Member_classes-Testing/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/JETBRA~1/CLION2~1.1/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/Ariel/Desktop/UBA/Algortimos 2/Taller/AyED2-Labo04-Compilacion-Member_classes-Testing/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/JETBRA~1/CLION2~1.1/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/Ariel/Desktop/UBA/Algortimos 2/Taller/AyED2-Labo04-Compilacion-Member_classes-Testing/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="gtest_main">
+				<Option output="C:/Users/Ariel/Desktop/UBA/Algortimos 2/Taller/AyED2-Labo04-Compilacion-Member_classes-Testing/cmake-build-debug/libgtest_main.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/Ariel/Desktop/UBA/Algortimos 2/Taller/AyED2-Labo04-Compilacion-Member_classes-Testing/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="C:/Program Files/JetBrains/CLion 2022.2.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2022.2.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/x86_64-w64-mingw32"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2022.2.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/backward"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2022.2.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2022.2.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../include"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2022.2.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include-fixed"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2022.2.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/include"/>
+					<Add directory="/mingw/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/PROGRA~1/JETBRA~1/CLION2~1.1/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/Ariel/Desktop/UBA/Algortimos 2/Taller/AyED2-Labo04-Compilacion-Member_classes-Testing/cmake-build-debug/Makefile&quot;  VERBOSE=1 gtest_main"/>
+					<CompileFile command="C:/PROGRA~1/JETBRA~1/CLION2~1.1/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/Ariel/Desktop/UBA/Algortimos 2/Taller/AyED2-Labo04-Compilacion-Member_classes-Testing/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/JETBRA~1/CLION2~1.1/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/Ariel/Desktop/UBA/Algortimos 2/Taller/AyED2-Labo04-Compilacion-Member_classes-Testing/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/JETBRA~1/CLION2~1.1/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/Ariel/Desktop/UBA/Algortimos 2/Taller/AyED2-Labo04-Compilacion-Member_classes-Testing/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="gtest_main/fast">
+				<Option output="C:/Users/Ariel/Desktop/UBA/Algortimos 2/Taller/AyED2-Labo04-Compilacion-Member_classes-Testing/cmake-build-debug/libgtest_main.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/Ariel/Desktop/UBA/Algortimos 2/Taller/AyED2-Labo04-Compilacion-Member_classes-Testing/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="C:/Program Files/JetBrains/CLion 2022.2.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2022.2.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/x86_64-w64-mingw32"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2022.2.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/backward"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2022.2.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2022.2.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../include"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2022.2.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include-fixed"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2022.2.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/include"/>
+					<Add directory="/mingw/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/PROGRA~1/JETBRA~1/CLION2~1.1/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/Ariel/Desktop/UBA/Algortimos 2/Taller/AyED2-Labo04-Compilacion-Member_classes-Testing/cmake-build-debug/Makefile&quot;  VERBOSE=1 gtest_main/fast"/>
+					<CompileFile command="C:/PROGRA~1/JETBRA~1/CLION2~1.1/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/Ariel/Desktop/UBA/Algortimos 2/Taller/AyED2-Labo04-Compilacion-Member_classes-Testing/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/JETBRA~1/CLION2~1.1/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/Ariel/Desktop/UBA/Algortimos 2/Taller/AyED2-Labo04-Compilacion-Member_classes-Testing/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/JETBRA~1/CLION2~1.1/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/Ariel/Desktop/UBA/Algortimos 2/Taller/AyED2-Labo04-Compilacion-Member_classes-Testing/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="ej1">
+				<Option output="C:/Users/Ariel/Desktop/UBA/Algortimos 2/Taller/AyED2-Labo04-Compilacion-Member_classes-Testing/cmake-build-debug/ej1.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/Ariel/Desktop/UBA/Algortimos 2/Taller/AyED2-Labo04-Compilacion-Member_classes-Testing/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="C:/Program Files/JetBrains/CLion 2022.2.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2022.2.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/x86_64-w64-mingw32"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2022.2.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/backward"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2022.2.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2022.2.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../include"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2022.2.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include-fixed"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2022.2.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/include"/>
+					<Add directory="/mingw/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/PROGRA~1/JETBRA~1/CLION2~1.1/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/Ariel/Desktop/UBA/Algortimos 2/Taller/AyED2-Labo04-Compilacion-Member_classes-Testing/cmake-build-debug/Makefile&quot;  VERBOSE=1 ej1"/>
+					<CompileFile command="C:/PROGRA~1/JETBRA~1/CLION2~1.1/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/Ariel/Desktop/UBA/Algortimos 2/Taller/AyED2-Labo04-Compilacion-Member_classes-Testing/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/JETBRA~1/CLION2~1.1/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/Ariel/Desktop/UBA/Algortimos 2/Taller/AyED2-Labo04-Compilacion-Member_classes-Testing/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/JETBRA~1/CLION2~1.1/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/Ariel/Desktop/UBA/Algortimos 2/Taller/AyED2-Labo04-Compilacion-Member_classes-Testing/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="ej1/fast">
+				<Option output="C:/Users/Ariel/Desktop/UBA/Algortimos 2/Taller/AyED2-Labo04-Compilacion-Member_classes-Testing/cmake-build-debug/ej1.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/Ariel/Desktop/UBA/Algortimos 2/Taller/AyED2-Labo04-Compilacion-Member_classes-Testing/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="C:/Program Files/JetBrains/CLion 2022.2.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2022.2.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/x86_64-w64-mingw32"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2022.2.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/backward"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2022.2.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2022.2.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../include"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2022.2.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include-fixed"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2022.2.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/include"/>
+					<Add directory="/mingw/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/PROGRA~1/JETBRA~1/CLION2~1.1/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/Ariel/Desktop/UBA/Algortimos 2/Taller/AyED2-Labo04-Compilacion-Member_classes-Testing/cmake-build-debug/Makefile&quot;  VERBOSE=1 ej1/fast"/>
+					<CompileFile command="C:/PROGRA~1/JETBRA~1/CLION2~1.1/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/Ariel/Desktop/UBA/Algortimos 2/Taller/AyED2-Labo04-Compilacion-Member_classes-Testing/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/JETBRA~1/CLION2~1.1/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/Ariel/Desktop/UBA/Algortimos 2/Taller/AyED2-Labo04-Compilacion-Member_classes-Testing/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/JETBRA~1/CLION2~1.1/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/Ariel/Desktop/UBA/Algortimos 2/Taller/AyED2-Labo04-Compilacion-Member_classes-Testing/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="ej2">
+				<Option output="C:/Users/Ariel/Desktop/UBA/Algortimos 2/Taller/AyED2-Labo04-Compilacion-Member_classes-Testing/cmake-build-debug/ej2.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/Ariel/Desktop/UBA/Algortimos 2/Taller/AyED2-Labo04-Compilacion-Member_classes-Testing/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="C:/Program Files/JetBrains/CLion 2022.2.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2022.2.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/x86_64-w64-mingw32"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2022.2.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/backward"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2022.2.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2022.2.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../include"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2022.2.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include-fixed"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2022.2.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/include"/>
+					<Add directory="/mingw/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/PROGRA~1/JETBRA~1/CLION2~1.1/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/Ariel/Desktop/UBA/Algortimos 2/Taller/AyED2-Labo04-Compilacion-Member_classes-Testing/cmake-build-debug/Makefile&quot;  VERBOSE=1 ej2"/>
+					<CompileFile command="C:/PROGRA~1/JETBRA~1/CLION2~1.1/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/Ariel/Desktop/UBA/Algortimos 2/Taller/AyED2-Labo04-Compilacion-Member_classes-Testing/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/JETBRA~1/CLION2~1.1/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/Ariel/Desktop/UBA/Algortimos 2/Taller/AyED2-Labo04-Compilacion-Member_classes-Testing/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/JETBRA~1/CLION2~1.1/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/Ariel/Desktop/UBA/Algortimos 2/Taller/AyED2-Labo04-Compilacion-Member_classes-Testing/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="ej2/fast">
+				<Option output="C:/Users/Ariel/Desktop/UBA/Algortimos 2/Taller/AyED2-Labo04-Compilacion-Member_classes-Testing/cmake-build-debug/ej2.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/Ariel/Desktop/UBA/Algortimos 2/Taller/AyED2-Labo04-Compilacion-Member_classes-Testing/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="C:/Program Files/JetBrains/CLion 2022.2.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2022.2.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/x86_64-w64-mingw32"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2022.2.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/backward"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2022.2.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2022.2.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../include"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2022.2.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include-fixed"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2022.2.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/include"/>
+					<Add directory="/mingw/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/PROGRA~1/JETBRA~1/CLION2~1.1/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/Ariel/Desktop/UBA/Algortimos 2/Taller/AyED2-Labo04-Compilacion-Member_classes-Testing/cmake-build-debug/Makefile&quot;  VERBOSE=1 ej2/fast"/>
+					<CompileFile command="C:/PROGRA~1/JETBRA~1/CLION2~1.1/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/Ariel/Desktop/UBA/Algortimos 2/Taller/AyED2-Labo04-Compilacion-Member_classes-Testing/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/JETBRA~1/CLION2~1.1/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/Ariel/Desktop/UBA/Algortimos 2/Taller/AyED2-Labo04-Compilacion-Member_classes-Testing/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/JETBRA~1/CLION2~1.1/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/Ariel/Desktop/UBA/Algortimos 2/Taller/AyED2-Labo04-Compilacion-Member_classes-Testing/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="ej3">
+				<Option output="C:/Users/Ariel/Desktop/UBA/Algortimos 2/Taller/AyED2-Labo04-Compilacion-Member_classes-Testing/cmake-build-debug/ej3.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/Ariel/Desktop/UBA/Algortimos 2/Taller/AyED2-Labo04-Compilacion-Member_classes-Testing/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="C:/Program Files/JetBrains/CLion 2022.2.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2022.2.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/x86_64-w64-mingw32"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2022.2.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/backward"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2022.2.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2022.2.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../include"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2022.2.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include-fixed"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2022.2.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/include"/>
+					<Add directory="/mingw/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/PROGRA~1/JETBRA~1/CLION2~1.1/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/Ariel/Desktop/UBA/Algortimos 2/Taller/AyED2-Labo04-Compilacion-Member_classes-Testing/cmake-build-debug/Makefile&quot;  VERBOSE=1 ej3"/>
+					<CompileFile command="C:/PROGRA~1/JETBRA~1/CLION2~1.1/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/Ariel/Desktop/UBA/Algortimos 2/Taller/AyED2-Labo04-Compilacion-Member_classes-Testing/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/JETBRA~1/CLION2~1.1/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/Ariel/Desktop/UBA/Algortimos 2/Taller/AyED2-Labo04-Compilacion-Member_classes-Testing/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/JETBRA~1/CLION2~1.1/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/Ariel/Desktop/UBA/Algortimos 2/Taller/AyED2-Labo04-Compilacion-Member_classes-Testing/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="ej3/fast">
+				<Option output="C:/Users/Ariel/Desktop/UBA/Algortimos 2/Taller/AyED2-Labo04-Compilacion-Member_classes-Testing/cmake-build-debug/ej3.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/Ariel/Desktop/UBA/Algortimos 2/Taller/AyED2-Labo04-Compilacion-Member_classes-Testing/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="C:/Program Files/JetBrains/CLion 2022.2.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2022.2.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/x86_64-w64-mingw32"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2022.2.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/backward"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2022.2.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2022.2.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../include"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2022.2.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include-fixed"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2022.2.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/include"/>
+					<Add directory="/mingw/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/PROGRA~1/JETBRA~1/CLION2~1.1/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/Ariel/Desktop/UBA/Algortimos 2/Taller/AyED2-Labo04-Compilacion-Member_classes-Testing/cmake-build-debug/Makefile&quot;  VERBOSE=1 ej3/fast"/>
+					<CompileFile command="C:/PROGRA~1/JETBRA~1/CLION2~1.1/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/Ariel/Desktop/UBA/Algortimos 2/Taller/AyED2-Labo04-Compilacion-Member_classes-Testing/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/JETBRA~1/CLION2~1.1/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/Ariel/Desktop/UBA/Algortimos 2/Taller/AyED2-Labo04-Compilacion-Member_classes-Testing/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/JETBRA~1/CLION2~1.1/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/Ariel/Desktop/UBA/Algortimos 2/Taller/AyED2-Labo04-Compilacion-Member_classes-Testing/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="solucion_testing">
+				<Option output="C:/Users/Ariel/Desktop/UBA/Algortimos 2/Taller/AyED2-Labo04-Compilacion-Member_classes-Testing/cmake-build-debug/solucion_testing.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/Ariel/Desktop/UBA/Algortimos 2/Taller/AyED2-Labo04-Compilacion-Member_classes-Testing/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="C:/Program Files/JetBrains/CLion 2022.2.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2022.2.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/x86_64-w64-mingw32"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2022.2.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/backward"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2022.2.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2022.2.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../include"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2022.2.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include-fixed"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2022.2.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/include"/>
+					<Add directory="/mingw/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/PROGRA~1/JETBRA~1/CLION2~1.1/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/Ariel/Desktop/UBA/Algortimos 2/Taller/AyED2-Labo04-Compilacion-Member_classes-Testing/cmake-build-debug/Makefile&quot;  VERBOSE=1 solucion_testing"/>
+					<CompileFile command="C:/PROGRA~1/JETBRA~1/CLION2~1.1/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/Ariel/Desktop/UBA/Algortimos 2/Taller/AyED2-Labo04-Compilacion-Member_classes-Testing/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/JETBRA~1/CLION2~1.1/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/Ariel/Desktop/UBA/Algortimos 2/Taller/AyED2-Labo04-Compilacion-Member_classes-Testing/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/JETBRA~1/CLION2~1.1/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/Ariel/Desktop/UBA/Algortimos 2/Taller/AyED2-Labo04-Compilacion-Member_classes-Testing/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="solucion_testing/fast">
+				<Option output="C:/Users/Ariel/Desktop/UBA/Algortimos 2/Taller/AyED2-Labo04-Compilacion-Member_classes-Testing/cmake-build-debug/solucion_testing.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/Ariel/Desktop/UBA/Algortimos 2/Taller/AyED2-Labo04-Compilacion-Member_classes-Testing/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="C:/Program Files/JetBrains/CLion 2022.2.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2022.2.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/x86_64-w64-mingw32"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2022.2.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/backward"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2022.2.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2022.2.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../include"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2022.2.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include-fixed"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2022.2.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/include"/>
+					<Add directory="/mingw/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/PROGRA~1/JETBRA~1/CLION2~1.1/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/Ariel/Desktop/UBA/Algortimos 2/Taller/AyED2-Labo04-Compilacion-Member_classes-Testing/cmake-build-debug/Makefile&quot;  VERBOSE=1 solucion_testing/fast"/>
+					<CompileFile command="C:/PROGRA~1/JETBRA~1/CLION2~1.1/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/Ariel/Desktop/UBA/Algortimos 2/Taller/AyED2-Labo04-Compilacion-Member_classes-Testing/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/JETBRA~1/CLION2~1.1/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/Ariel/Desktop/UBA/Algortimos 2/Taller/AyED2-Labo04-Compilacion-Member_classes-Testing/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/JETBRA~1/CLION2~1.1/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/Ariel/Desktop/UBA/Algortimos 2/Taller/AyED2-Labo04-Compilacion-Member_classes-Testing/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="C:/Users/Ariel/Desktop/UBA/Algortimos 2/Taller/AyED2-Labo04-Compilacion-Member_classes-Testing/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="C:/PROGRA~1/JETBRA~1/CLION2~1.1/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/Ariel/Desktop/UBA/Algortimos 2/Taller/AyED2-Labo04-Compilacion-Member_classes-Testing/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="C:/PROGRA~1/JETBRA~1/CLION2~1.1/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/Ariel/Desktop/UBA/Algortimos 2/Taller/AyED2-Labo04-Compilacion-Member_classes-Testing/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/JETBRA~1/CLION2~1.1/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/Ariel/Desktop/UBA/Algortimos 2/Taller/AyED2-Labo04-Compilacion-Member_classes-Testing/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/JETBRA~1/CLION2~1.1/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/Ariel/Desktop/UBA/Algortimos 2/Taller/AyED2-Labo04-Compilacion-Member_classes-Testing/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="C:/Users/Ariel/Desktop/UBA/Algortimos 2/Taller/AyED2-Labo04-Compilacion-Member_classes-Testing/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="C:/PROGRA~1/JETBRA~1/CLION2~1.1/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/Ariel/Desktop/UBA/Algortimos 2/Taller/AyED2-Labo04-Compilacion-Member_classes-Testing/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="C:/PROGRA~1/JETBRA~1/CLION2~1.1/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/Ariel/Desktop/UBA/Algortimos 2/Taller/AyED2-Labo04-Compilacion-Member_classes-Testing/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/JETBRA~1/CLION2~1.1/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/Ariel/Desktop/UBA/Algortimos 2/Taller/AyED2-Labo04-Compilacion-Member_classes-Testing/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/JETBRA~1/CLION2~1.1/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/Ariel/Desktop/UBA/Algortimos 2/Taller/AyED2-Labo04-Compilacion-Member_classes-Testing/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="C:/Users/Ariel/Desktop/UBA/Algortimos 2/Taller/AyED2-Labo04-Compilacion-Member_classes-Testing/src/Fecha.cpp">
+			<Option target="ej3"/>
+		</Unit>
+		<Unit filename="C:/Users/Ariel/Desktop/UBA/Algortimos 2/Taller/AyED2-Labo04-Compilacion-Member_classes-Testing/src/Funciones.cpp">
+			<Option target="ej3"/>
+		</Unit>
+		<Unit filename="C:/Users/Ariel/Desktop/UBA/Algortimos 2/Taller/AyED2-Labo04-Compilacion-Member_classes-Testing/src/Funciones.h">
+			<Option target="ej3"/>
+		</Unit>
+		<Unit filename="C:/Users/Ariel/Desktop/UBA/Algortimos 2/Taller/AyED2-Labo04-Compilacion-Member_classes-Testing/src/Libreta.cpp">
+			<Option target="solucion_testing"/>
+		</Unit>
+		<Unit filename="C:/Users/Ariel/Desktop/UBA/Algortimos 2/Taller/AyED2-Labo04-Compilacion-Member_classes-Testing/src/Libreta.h">
+			<Option target="solucion_testing"/>
+		</Unit>
+		<Unit filename="C:/Users/Ariel/Desktop/UBA/Algortimos 2/Taller/AyED2-Labo04-Compilacion-Member_classes-Testing/src/Meses.h">
+			<Option target="ej3"/>
+		</Unit>
+		<Unit filename="C:/Users/Ariel/Desktop/UBA/Algortimos 2/Taller/AyED2-Labo04-Compilacion-Member_classes-Testing/src/Periodo.cpp">
+			<Option target="ej1"/>
+			<Option target="ej2"/>
+			<Option target="ej3"/>
+		</Unit>
+		<Unit filename="C:/Users/Ariel/Desktop/UBA/Algortimos 2/Taller/AyED2-Labo04-Compilacion-Member_classes-Testing/src/Periodo.h">
+			<Option target="ej3"/>
+		</Unit>
+		<Unit filename="C:/Users/Ariel/Desktop/UBA/Algortimos 2/Taller/AyED2-Labo04-Compilacion-Member_classes-Testing/src/Truco.cpp">
+			<Option target="solucion_testing"/>
+		</Unit>
+		<Unit filename="C:/Users/Ariel/Desktop/UBA/Algortimos 2/Taller/AyED2-Labo04-Compilacion-Member_classes-Testing/src/Truco.h">
+			<Option target="solucion_testing"/>
+		</Unit>
+		<Unit filename="C:/Users/Ariel/Desktop/UBA/Algortimos 2/Taller/AyED2-Labo04-Compilacion-Member_classes-Testing/tests/ej1_periodo.cpp">
+			<Option target="ej1"/>
+		</Unit>
+		<Unit filename="C:/Users/Ariel/Desktop/UBA/Algortimos 2/Taller/AyED2-Labo04-Compilacion-Member_classes-Testing/tests/ej2_periodo_y_fecha.cpp">
+			<Option target="ej2"/>
+		</Unit>
+		<Unit filename="C:/Users/Ariel/Desktop/UBA/Algortimos 2/Taller/AyED2-Labo04-Compilacion-Member_classes-Testing/tests/ej3_funciones.cpp">
+			<Option target="ej3"/>
+		</Unit>
+		<Unit filename="C:/Users/Ariel/Desktop/UBA/Algortimos 2/Taller/AyED2-Labo04-Compilacion-Member_classes-Testing/tests/gtest-1.8.1/gtest-all.cc">
+			<Option target="gtest"/>
+		</Unit>
+		<Unit filename="C:/Users/Ariel/Desktop/UBA/Algortimos 2/Taller/AyED2-Labo04-Compilacion-Member_classes-Testing/tests/gtest-1.8.1/gtest_main.cc">
+			<Option target="gtest_main"/>
+		</Unit>
+		<Unit filename="C:/Users/Ariel/Desktop/UBA/Algortimos 2/Taller/AyED2-Labo04-Compilacion-Member_classes-Testing/tests/solucion_testing.cpp">
+			<Option target="solucion_testing"/>
+		</Unit>
+		<Unit filename="C:/Users/Ariel/Desktop/UBA/Algortimos 2/Taller/AyED2-Labo04-Compilacion-Member_classes-Testing/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

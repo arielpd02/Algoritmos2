@@ -1,0 +1,6 @@
+/mnt/c/Users/Ariel/Desktop/UBA/Algortimos 2/Taller/AyED2-Labo05-Listas_enlazadas/taller_lista_enlazada/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/mnt/c/Users/Ariel/Desktop/UBA/Algortimos 2/Taller/AyED2-Labo05-Listas_enlazadas/taller_lista_enlazada/cmake-build-debug/CMakeFiles/edit_cache.dir
+/mnt/c/Users/Ariel/Desktop/UBA/Algortimos 2/Taller/AyED2-Labo05-Listas_enlazadas/taller_lista_enlazada/cmake-build-debug/CMakeFiles/correrValgrind.dir
+/mnt/c/Users/Ariel/Desktop/UBA/Algortimos 2/Taller/AyED2-Labo05-Listas_enlazadas/taller_lista_enlazada/cmake-build-debug/CMakeFiles/correrTests.dir
+/mnt/c/Users/Ariel/Desktop/UBA/Algortimos 2/Taller/AyED2-Labo05-Listas_enlazadas/taller_lista_enlazada/cmake-build-debug/CMakeFiles/gtest_main.dir
+/mnt/c/Users/Ariel/Desktop/UBA/Algortimos 2/Taller/AyED2-Labo05-Listas_enlazadas/taller_lista_enlazada/cmake-build-debug/CMakeFiles/gtest.dir

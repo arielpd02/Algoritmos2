@@ -1,0 +1,50 @@
+\begin{Interfaz}
+    \InterfazFuncion{NuevoSistema}{}{puesto}
+    [la pre]
+    {la post}
+    [la complejidad]
+    [la descripción]
+    
+    \InterfazFuncion{RegistrarCompra}{}{cant}
+    [la pre]
+    {la post}
+    [$\mathcal{O}(log(A)+log(P)+log(I)+log(cant))$]
+    [la descripción]
+    
+    \InterfazFuncion{HackearSistema}{}{nat}
+    [En $e.puestosHackeablesPorPersona$ están definidas la persona y el ítem, y existe un puesto id asociado a ellos tal que tiene hackeos posibles.]
+    {la post}
+    [$\mathcal{O}(log(A)+log(I) \;|\; log(A)+log(I)+log(P))$]
+    [la descripción]
+    
+    \InterfazFuncion{GastoTotalPorPersona}{}{puesto}
+    [la pre]
+    {la post}
+    [$\mathcal{O}(log(A))$]
+    [la descripción]
+    
+    \InterfazFuncion{PersonaQueMasGasto}{}{puesto}
+    [la pre]
+    {la post}
+    [$\mathcal{O}(1)$]
+    [la descripción]
+
+    \InterfazFuncion{PuestoConMenorStock}{}{puesto}
+    [la pre]
+    {la post}
+    [la complejidad]
+    [la descripción]
+
+    \InterfazFuncion{PersonasEnSistema}{}{puesto}
+    [la pre]
+    {la post}
+    [$\mathcal{O}(1)$]
+    [la descripción]
+
+    \InterfazFuncion{PuestosDeComidaEnSistema}{}{puesto}
+    [la pre]
+    {la post}
+    [$\mathcal{O}(1)$]
+    [la descripción]
+
+\end{Interfaz}

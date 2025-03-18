@@ -1,0 +1,86 @@
+\begin{Algoritmos}
+    \begin{algorithm}
+    \caption{\textbf{iConstruirPromos}(\In{d}{dicc($item$, dicc($cant$, $nat$))}) $\to$ $res$ : diccLog($item$, arreglo($nat$))}
+    \begin{algorithmic}
+        \State res $\gets$ Vacío()
+        \State it $\gets$ CrearIt($d$)
+        \While{HaySiguiente($it$)}
+            \State sig $\gets$ Siguiente($it$)
+            \State Definir($sig_1$, iConstruirPromosParaItem($sig_2$), $res$)
+            \State Avanzar($it$)
+        \EndWhile
+        \State \Return res
+        \\
+        \Statex \underline{Complejidad:} -
+        \Statex \underline{Justificación:} No hay ninguna restricción.
+    \end{algorithmic}
+    \end{algorithm}
+
+    \begin{algorithm}
+    \caption{\textbf{iConstruirPromosParaItem}(\In{d}{dicc($cant$, $nat$)}) $\to$ $res$ : arreglo\_dimensionable de $nat$}
+    \begin{algorithmic}
+        \State res $\gets$ CrearArreglo(maxPromosParaItem($d$) + 1)  \Comment{Así incluímos la máxima promo, no nos interesa la posición 0}
+        \State i $\gets$ 0
+        \State mejorPromo $\gets$ 0
+        \While{i $<$ Longitud($res$)}
+            \If{Definido($i$, $d$)}
+                \State mejorPromo $\gets$ Significado($i$, $d$)
+            \EndIf
+            \State res[$i$] $\gets$ mejorPromo
+        \EndWhile
+        \State \Return res
+        \\
+        \Statex \underline{Complejidad:} -
+        \Statex \underline{Justificación:} No hay ninguna restricción.
+    \end{algorithmic}
+    \end{algorithm}
+
+    \begin{algorithm}
+    \caption{\textbf{iMaxPromoParaItem}(\In{d}{dicc($cant$, $nat$)}) $\to$ $res$ : $nat$}
+    \begin{algorithmic}
+        \State ir $\gets$ CrearIt($d$)
+        \State res $\gets$ 0
+        \While{HaySiguiente($it$)}
+            \State clave $\gets$ SiguienteClave($it$)
+            \If{clave $>$ res}
+                \State res $\gets$ clave
+            \EndIf
+            \State Avanzar($it$)
+        \EndWhile
+        \State \Return res
+        \\
+        \Statex \underline{Complejidad:} -
+        \Statex \underline{Justificación:} No hay ninguna restricción.
+    \end{algorithmic}
+    \end{algorithm}
+
+    \begin{algorithm}
+    \caption{\textbf{iConstruirDiccLog}(\In{d}{dicc($\kappa$, $\sigma$)}) $\to$ $res$ : diccLog($\kappa$, $\sigma$)}
+    \begin{algorithmic}
+        \State res $\gets$ Vacío()
+        \State it $\gets$ CreateIt($d$)
+        \While{HaySiguiente($it$)}
+            \State sig $\gets$ Siguiente($it$)
+            \State Definir($sig_1$, $sig_2$, $res$)
+            \State Avanzar($it$)
+        \EndWhile
+        \State \Return res
+        \\
+        \Statex \underline{Complejidad:} -
+        \Statex \underline{Justificación:} No hay ninguna restricción.
+    \end{algorithmic}
+    \end{algorithm}
+
+    \begin{algorithm}
+    \caption{\textbf{iCalcularTotal}(\In{e}{$estr$}, \In{i}{$item$}, \In{c}{$cant$}) $\to$ $res$ : $nat$}
+        \begin{algorithmic}
+        \State descuento $\gets$ iGetDescuento($e$, $i$, $c$)  \Comment{$\mathcal{O}(log(I))$}
+        \State precio $\gets$ Significado($e.menu$, $i$)  \Comment{$\mathcal{O}(log(I))$}
+        \State res $\gets$ iAplicarDescuento(c $\times$ precio, descuento)  \Comment{$\mathcal{O}(1)$}
+        \State \Return res
+        \\
+        \Statex \underline{Complejidad:} $\mathcal{O}(log(I))$
+        \Statex \underline{Justificación:} Queda $\mathcal{O}(log(I) + log(I) + 1) = \mathcal{O}(log(I))$.
+        \end{algorithmic}
+    \end{algorithm}
+\end{Algoritmos}

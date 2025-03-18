@@ -1,0 +1,259 @@
+\begin{Algoritmos}
+    \begin{itemize}
+        \item Sea $U$ el máximo entre 1 y la cantidad de nodos que tiene el heap.
+    \end{itemize}
+    
+    \begin{algorithm}
+    \caption{\textbf{iVacío}(\In{min}{bool}) $\to$ $res$ : estr}
+    \begin{algorithmic}
+        \State raíz $\gets$ NULL  \Comment{$\mathcal{O}(1)$}
+        \State ultimo $\gets$ 0  \Comment{$\mathcal{O}(1)$}
+        \State tamaño $\gets$ 0  \Comment{$\mathcal{O}(1)$}
+        \State mapping $\gets$ vacío()  \Comment{$\mathcal{O}(1)$}
+        \State min $\gets$ min  \Comment{$\mathcal{O}(1)$}
+        \State \Return tupla(raiz, ultimo, tamaño, min, mapping)
+        \\
+        \Statex \underline{Complejidad:} $\mathcal{O}(1)$
+        \Statex \underline{Justificación:} Es la suma de operaciones constantes
+    \end{algorithmic}
+    \end{algorithm}
+
+    \begin{algorithm}
+    \caption{\textbf{iEncolar}(\Inout{h}{estr}, \In{a}{$\alpha$})}
+    \begin{algorithmic}
+        \If{Definido?($h.mapping$, $a$)}  \Comment{$\mathcal{O}(log(U))$}
+            \State def $\gets$ Significado($h.mapping$, $a$)  \Comment{$\mathcal{O}(log(U))$}
+            \State Definir($h.mapping$, $a$, $\langle$ def.puntero, def.freq + 1 $\rangle$)  \Comment{$\mathcal{O}(log(U))$}
+        \Else
+            \State $nodo*$ nuevo $\gets$ \textbf{\&} tupla($NULL$, $NULL$, $NULL$, copy($a$))  \Comment{$\mathcal{O}$(copy($\alpha$))}
+            \State nuevo.it $\gets$ Definir($h.mapping$, $val$, $\langle$nuevo, 1$\rangle$)  \Comment{$\mathcal{O}(log(U))$}
+            \State Insertar($h$, $nuevo$)  \Comment{$\mathcal{O}(log(U))$}
+            \State SiftUp($nuevo$)  \Comment{$\mathcal{O}(log(U))$}
+        \EndIf
+        \State h.tamaño $\gets$ h.tamaño + 1  \Comment{$\mathcal{O}(1)$}
+        \\
+        \Statex \underline{Complejidad:} $\mathcal{O}(log(U) + copy(\alpha))$
+        \Statex \underline{Justificación:} Es la suma de operaciones que tardan $log(U)$ más lo que tarda en copiarse el valor de tipo $\alpha$. Si es un tipo primitivo, es constante.
+    \end{algorithmic}
+    \end{algorithm}
+
+    \begin{algorithm}
+    \caption{\textbf{iDesencolar}(\Inout{h}{estr})}
+    \begin{algorithmic}
+        \State def $\gets$ Significado($h.mapping$, Proximo())  \Comment{$\mathcal{O}(log(U))$}
+        \If{def.freq $>$ 1}  \Comment{$\mathcal{O}(1)$}
+            \State // Se insertó más de una vez este valor, así que reducimos su frecuencia y listo.
+            \State Definir($h.mapping$, Proximo(), $\langle$def.puntero, def.freq - 1$\rangle$)  \Comment{$\mathcal{O}(log(U))$}
+            \State h.tamaño $\gets$ h.tamaño - 1  \Comment{$\mathcal{O}(1)$}
+            \State \Return
+        \EndIf
+        \\
+        \State $nodo*$ ultimo $\gets$ buscar($h.raiz$, $h.ultimo$)
+
+        \If{raiz = ultimo}
+            \State EliminarSiguiente(raiz$\to$it)  \Comment{$\mathcal{O}(1)$}
+            \State raiz$\to$val $\gets$ $NULL$  \Comment{Liberamos memoria. $\mathcal{O}(1)$}
+            \State raiz $\gets$ $NULL$  \Comment{Liberamos memoria. $\mathcal{O}(1)$}
+        \Else
+            \State Swap($raiz$, $ultimo$)  \Comment{$\mathcal{O}(1)$}
+            \\
+            \If{ultimo$\to$padre$\to$izq = ultimo}  \Comment{$\mathcal{O}(1)$}
+                \State ultimo$\to$padre$\to$izq $\gets$ $NULL$  \Comment{$\mathcal{O}(1)$}
+            \Else
+                \State ultimo$\to$padre$\to$der $\gets$ $NULL$  \Comment{$\mathcal{O}(1)$}
+            \EndIf
+            \State EliminarSiguiente(ult$\to$it)
+            \State ultimo$\to$val $\gets$ $NULL$  \Comment{Liberamos memoria. $\mathcal{O}(1)$}
+            \State ultimo $\gets$ $NULL$  \Comment{Liberamos memoria. $\mathcal{O}(1)$}
+
+            \State SiftDown($h$)  \Comment{$\mathcal{O}(log(U))$}
+        \EndIf
+
+        \State h.ultimo $\gets$ h.ultimo - 1  \Comment{$\mathcal{O}(1)$}
+        \\
+        \Statex \underline{Complejidad:} $\mathcal{O}(log(U))$
+        \Statex \underline{Justificación:} Es la suma de operaciones constantes y otras que tardan $log(U)$.
+    \end{algorithmic}
+    \end{algorithm}
+
+    \begin{algorithm}
+    \caption{\textbf{iProximo}(\In{h}{estr}) $\to$ $res$ : $\alpha$}
+    \begin{algorithmic}
+        \State \Return *(h.raiz$\to$val)
+        \\
+        \Statex \underline{Complejidad:} $\mathcal{O}(1)$
+        \Statex \underline{Justificación:} Es simplemente desreferenciar el nodo y devolver su valor.
+    \end{algorithmic}
+    \end{algorithm}
+
+    \begin{algorithm}
+    \caption{\textbf{iTamaño}(\In{h}{estr}) $\to$ $res$ : $nat$}
+    \begin{algorithmic}
+        \State \Return h.tamaño
+        \\
+        \Statex \underline{Complejidad:} $\mathcal{O}(1)$
+        \Statex \underline{Justificación:} Es simplemente devolver un elemento de la estructura.
+    \end{algorithmic}
+    \end{algorithm}
+
+    \begin{algorithm}
+    \caption{\textbf{iPertenece}(\In{h}{estr}, \In{a}{$\alpha$}) $\to$ $res$ : $bool$}
+    \begin{algorithmic}
+        \State \Return Definido?($h.mapping$, $a$)
+        \\
+        \Statex \underline{Complejidad:} $\mathcal{O}(log(U))$
+        \Statex \underline{Justificación:} Es simplemente chequear en un diccionario logarítmico si la clave está definida.
+    \end{algorithmic}
+    \end{algorithm}
+
+    \begin{algorithm}
+    \caption{\textbf{iBorrar}(\Inout{h}{estr}, \In{a}{$\alpha$})}
+    \begin{algorithmic}
+        \State def $\gets$ Significado($h.mapping$, $a$)  \Comment{$\mathcal{O}(log(U))$}
+        \If{def.freq $>$ 1}  \Comment{$\mathcal{O}(1)$}
+            \State // Se insertó más de una vez este valor, así que reducimos su frecuencia y listo.
+            \State Definir($h.mapping$, $a$, $\langle$def.puntero, def.freq - 1$\rangle$)  \Comment{$\mathcal{O}(log(U))$}
+            \State h.tamaño $\gets$ h.tamaño - 1  \Comment{$\mathcal{O}(1)$}
+            \State \Return
+        \EndIf
+        \State $nodo*$ n $\gets$ def.puntero  \Comment{$\mathcal{O}(1)$}
+        \\
+        \State // Lo mandamos a la raíz y lo desencolamos
+        \While{n$\to$padre != $NULL$}  \Comment{$\mathcal{O}(1)$}
+            \State Swap(n$\to$padre, $n$)  \Comment{$\mathcal{O}(1)$}
+            \State n $\gets$ n$\to$padre  \Comment{$\mathcal{O}(1)$}
+        \EndWhile
+        \State Desencolar()  \Comment{$\mathcal{O}(log(U))$}
+        \\
+        \Statex \underline{Complejidad:} $\mathcal{O}(log(U))$
+        \Statex \underline{Justificación:} Es la suma de operaciones constantes o que tardan $log(U)$ más un ciclo que, en el peor caso, corre $log(U)$ veces.
+    \end{algorithmic}
+    \end{algorithm}
+
+    \begin{algorithm}
+    \caption{\textbf{iInsertar}(\Inout{h}{estr}, \Inout{n}{puntero($nodo$)})}
+    \begin{algorithmic}
+        \State h.ultimo $\gets$ h.ultimo + 1  \Comment{$\mathcal{O}(1)$}
+        \\
+        \State // Nos fijamos si vamos a insertar la raíz
+        \If{h.ultimo = 1}  \Comment{$\mathcal{O}(1)$}
+            \State h.raiz $\gets$ n  \Comment{$\mathcal{O}(1)$}
+            \State \Return
+        \EndIf
+        \\
+        \State // Si no es la raíz, buscamos al padre recorriendo el camino desde la raíz hasta la posición en la que iría el nodo, no incluyendo ninguna de las dos.
+        \State $nodo*$ padre $\gets$ buscar($h.raiz$, $h.ultimo$)  \Comment{$\mathcal{O}(log(U))$}
+        \State n$\to$padre $\gets$ padre  \Comment{$\mathcal{O}(1)$}
+        \\
+        \State // Insertamos al hijo en la posición que corresponda
+        \If{pos = 0}  \Comment{$\mathcal{O}(1)$}
+            \State padre$\to$izq $\gets$ n  \Comment{$\mathcal{O}(1)$}
+        \Else
+            \State padre$\to$der $\gets$ n  \Comment{$\mathcal{O}(1)$}
+        \EndIf
+        \\
+        \Statex \underline{Complejidad:} $\mathcal{O}(log(U))$
+        \Statex \underline{Justificación:} Es la suma de operaciones constantes, una operación que tarda $\mathcal{O}(log(U))$ y un ciclo que corre $log(U)$ veces.
+    \end{algorithmic}
+    \end{algorithm}
+
+    \begin{algorithm}
+    \caption{\textbf{iBuscar}(\In{n}{puntero($nodo$)}, \In{camino}{$nat$}) $\to$ $res$ : puntero($nodo$)}
+    \begin{algorithmic}
+        \If{camino $\leq$ 1}  \Comment{$\mathcal{O}(1)$}
+            \State \Return n
+        \EndIf
+        \State $nodo*$ prox $\gets$ Buscar($n$, $camino / 2$)  \Comment{División entera: $\mathcal{O}(1)$}
+        \If{$camino\;\%\; 2 = 1$}
+            \If{prox$\to$der != $NULL$}  \Comment{$\mathcal{O}(1)$}
+                \State \Return prox$\to$der
+            \EndIf
+            \State \Return prox
+        \EndIf
+        \If{prox$\to$izq != $NULL$}  \Comment{$\mathcal{O}(1)$}
+            \State \Return prox$\to$izq
+        \EndIf
+        \State \Return prox
+        \\
+        \Statex \underline{Complejidad:} $\mathcal{O}(log(U))$
+        \Statex \underline{Justificación:} Cada llamada sucesiva al procedimiento reducimos el camino a la mitad. En el peor caso, estamos siguiendo el camino al último elemento, luego, recorreríamos la altura del árbol, con lo cual nos queda $\mathcal{O}(log(U))$.
+    \end{algorithmic}
+    \end{algorithm}
+
+    \begin{algorithm}
+    \caption{\textbf{iSiftUp}(\Inout{h}{estr}, \Inout{n}{puntero($nodo$)})}
+    \begin{algorithmic}
+        \State $nodo$* actual $\gets$ n  \Comment{$\mathcal{O}(1)$}
+        \While{(actual$\to$padre != $NULL$) \&\& Cmp(*(actual$\to$val), *(actual$\to$padre$\to$val))}  \Comment{$\mathcal{O}(1)$}
+            \State Swap(actual$\to$padre, actual)  \Comment{$\mathcal{O}(1)$}
+            \State actual $\gets$ actual$\to$padre  \Comment{$\mathcal{O}(1)$}
+        \EndWhile
+        \\
+        \Statex \underline{Complejidad:} $\mathcal{O}(log(U))$
+        \Statex \underline{Justificación:} El ciclo corre como máximo $log(U)$ veces, ya que el nodo se insertó en la siguiente posición libre y como mucho puede subir hasta la raíz.
+    \end{algorithmic}
+    \end{algorithm}
+
+    \begin{algorithm}
+    \caption{\textbf{iSiftDown}(\Inout{h}{estr})}
+    \begin{algorithmic}
+        \State $nodo*$ actual $\gets$ h.raiz  \Comment{$\mathcal{O}(1)$}
+        \While{(actual$\to$izq != $NULL$) \textbar\textbar (actual$\to$der != $NULL$)}  \Comment{$\mathcal{O}(1)$}
+            \State $nodo*$ mayor $\gets$ actual$\to$izq  \Comment{$\mathcal{O}(1)$}
+
+            \If{(actual$\to$der) != $NULL$ \&\& Cmp(*(actual$\to$der$\to$val), *(actual$\to$izq$\to$val))}  \Comment{$\mathcal{O}(1)$}
+                \State mayor $\gets$ actual$\to$der  \Comment{$\mathcal{O}(1)$}
+            \EndIf
+
+            \If{Cmp(*(mayor$\to$val), *(actual$\to$val))}  \Comment{$\mathcal{O}(1)$}
+                \State Swap($actual$, $mayor$)  \Comment{$\mathcal{O}(1)$}
+                \State actual $\gets$ mayor  \Comment{$\mathcal{O}(1)$}
+            \Else
+                \State \textbf{break}
+            \EndIf
+        \EndWhile
+        \\
+        \Statex \underline{Complejidad:} $\mathcal{O}(log(U))$
+        \Statex \underline{Justificación:} El ciclo corre como máximo $log(U)$ veces ya que en el peor caso estamos haciendo sift down del menor valor de todo el heap, esto implica recorrer la altura del árbol, es decir, $\mathcal{O}(log(U))$.
+    \end{algorithmic}
+    \end{algorithm}
+
+    \begin{algorithm}
+    \caption{\textbf{iSwap}(\Inout{padre}{puntero($nodo$)}, \Inout{hijo}{puntero($nodo$)})}
+    \begin{algorithmic}
+        \State // Nos guardamos temporalmente el mapping, el valor y el iterador del padre.
+        \State node\_tmp $\gets$ Siguient(padre$\to$it).second.first  \Comment{$\mathcal{O}(1)$}
+        \State it\_tmp $\gets$ padre$\to$it  \Comment{$\mathcal{O}(1)$}
+        \State val\_tmp $\gets$ padre$\to$val  \Comment{Almacena el puntero: $\mathcal{O}(1)$}
+        \\
+        \State // Actualizamos el nodo del mapping.
+        \State Siguiente(padre$\to$it).second.first $\gets$ Siguiente(hijo$\to$it).second.first  \Comment{$\mathcal{O}(1)$}
+        \State Siguiente(hijo$\to$it).second.first $\gets$ node\_tmp  \Comment{$\mathcal{O}(1)$}
+        \\
+        \State // Swap valores
+        \State padre$\to$val $\gets$ hijo$\to$val  \Comment{$\mathcal{O}(1)$}
+        \State hijo$\to$val $\gets$ val\_tmp  \Comment{$\mathcal{O}(1)$}
+        \\
+        \State // Swap iteradores
+        \State padre$\to$it $\gets$ hijo$\to$it  \Comment{$\mathcal{O}(1)$}
+        \State hijo$\to$it $\gets$ it\_tmp  \Comment{$\mathcal{O}(1)$}
+        \\
+        \Statex \underline{Complejidad:} $\mathcal{O}(1)$
+        \Statex \underline{Justificación:} Solamente almacenamos y movemos punteros de lugar.
+    \end{algorithmic}
+    \end{algorithm}
+
+    \begin{algorithm}
+    \caption{\textbf{iCmp}(\In{h}{estr}, \In{a_1}{$\alpha$}, \In{a_2}{$\alpha$})}
+    \begin{algorithmic}
+        \If{h.min}
+            \State \Return $a_1 < a_2$
+        \EndIf
+        \State \Return $a_1 > a_2$
+        \\
+        \Statex \underline{Complejidad:} $\mathcal{O}(1)$
+        \Statex \underline{Justificación:} Es simplemente una comparación.
+    \end{algorithmic}
+    \end{algorithm}
+
+\end{Algoritmos}

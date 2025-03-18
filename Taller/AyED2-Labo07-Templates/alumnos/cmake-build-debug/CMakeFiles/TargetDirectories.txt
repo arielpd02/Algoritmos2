@@ -1,0 +1,14 @@
+/mnt/c/Users/Ariel/Desktop/UBA/Algortimos 2/Taller/AyED2-Labo07-Templates/alumnos/cmake-build-debug/CMakeFiles/base.dir
+/mnt/c/Users/Ariel/Desktop/UBA/Algortimos 2/Taller/AyED2-Labo07-Templates/alumnos/cmake-build-debug/CMakeFiles/ej2.dir
+/mnt/c/Users/Ariel/Desktop/UBA/Algortimos 2/Taller/AyED2-Labo07-Templates/alumnos/cmake-build-debug/CMakeFiles/ej3.dir
+/mnt/c/Users/Ariel/Desktop/UBA/Algortimos 2/Taller/AyED2-Labo07-Templates/alumnos/cmake-build-debug/CMakeFiles/ej4.dir
+/mnt/c/Users/Ariel/Desktop/UBA/Algortimos 2/Taller/AyED2-Labo07-Templates/alumnos/cmake-build-debug/CMakeFiles/gtest_main.dir
+/mnt/c/Users/Ariel/Desktop/UBA/Algortimos 2/Taller/AyED2-Labo07-Templates/alumnos/cmake-build-debug/CMakeFiles/ej1.dir
+/mnt/c/Users/Ariel/Desktop/UBA/Algortimos 2/Taller/AyED2-Labo07-Templates/alumnos/cmake-build-debug/CMakeFiles/ej7.dir
+/mnt/c/Users/Ariel/Desktop/UBA/Algortimos 2/Taller/AyED2-Labo07-Templates/alumnos/cmake-build-debug/CMakeFiles/gtest.dir
+/mnt/c/Users/Ariel/Desktop/UBA/Algortimos 2/Taller/AyED2-Labo07-Templates/alumnos/cmake-build-debug/CMakeFiles/ej6.dir
+/mnt/c/Users/Ariel/Desktop/UBA/Algortimos 2/Taller/AyED2-Labo07-Templates/alumnos/cmake-build-debug/CMakeFiles/ej9.dir
+/mnt/c/Users/Ariel/Desktop/UBA/Algortimos 2/Taller/AyED2-Labo07-Templates/alumnos/cmake-build-debug/CMakeFiles/ej5.dir
+/mnt/c/Users/Ariel/Desktop/UBA/Algortimos 2/Taller/AyED2-Labo07-Templates/alumnos/cmake-build-debug/CMakeFiles/ej8.dir
+/mnt/c/Users/Ariel/Desktop/UBA/Algortimos 2/Taller/AyED2-Labo07-Templates/alumnos/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/mnt/c/Users/Ariel/Desktop/UBA/Algortimos 2/Taller/AyED2-Labo07-Templates/alumnos/cmake-build-debug/CMakeFiles/edit_cache.dir

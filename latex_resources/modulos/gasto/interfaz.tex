@@ -1,0 +1,32 @@
+\begin{Interfaz}
+  \textbf{parámetros formales}\hangindent=2\parindent\\
+
+  \textbf{se explica con}: \tadNombre{Tupla$(gasto: nat, persona: nat)$}
+
+  \textbf{géneros}: \TipoVariable{gasto}.
+
+  \Titulo{Operaciones básicas de gasto}
+
+  \InterfazFuncion{$\bullet < \bullet$}{\In{g_1}{gasto}, \In{g_2}{gasto}}{bool}
+    [$true$]
+    {$ res \igobs g1 < g2 $}
+    [$\mathcal{O}(1)$]
+    [Compara gastos entre sí. Como los vamos a querer tener en un max heap pero, si el gasto es el mismo, desempatar por menor id, chequeamos primero el gasto y luego el id de la persona de ser necesario.]
+
+    \Titulo{Especificación de las operaciones utilizadas en la interfaz}
+    
+    \begin{tad}{\tadNombre{Gasto}}
+    
+    \tadGeneros{gasto}
+    \tadExtiende{\tadNombre{Tupla(Nat, Persona)}}
+    \tadUsa{Tupla, Persona, Nat}
+    \tadAlinearFunciones{\puntito[cantidad]}{ConsumoSimple}
+    \tadOtrasOperaciones
+        \tadOperacion{$\bullet < \bullet$}{gasto, gasto}{bool}{}
+    
+    \tadAxiomas[\paratodo{gasto}{g_1, g_2}]
+    \tadAlinearAxiomas{c[cantidad])}
+    \tadAxioma{$g_1 < g_2$}{($g_1$.gasto != $g_2$.gasto $\wedge$ $g_1$.gasto $<$ $g_2$.gasto) $\lor$ ($g_1$.persona $>$ $g_2$.persona)}
+    
+    \end{tad}
+\end{Interfaz}

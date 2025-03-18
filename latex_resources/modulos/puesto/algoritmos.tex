@@ -1,0 +1,93 @@
+\begin{Algoritmos}
+    
+
+    \begin{algorithm}
+    \caption{\textbf{iNuevoPuesto}(\In{id}{PuestoId}, \In{m}{dicc($item$, $nat$)}, \In{s}{dicc($item$, $cant$)}, \In{d}{dicc($item$, dicc($cant$, $nat$))}) $\to$ $res$ : $puesto$}
+    \begin{algorithmic}
+        \State menu $\gets$ iConstruirDiccLog($m$)
+        \State stock $\gets$ iConstruirDiccLog($s$)
+        \State promos $\gets$ iConstruirPromos($d$)
+        \State res $\gets$ $\langle$$id$, $menu$, $stock$, $promos$, Vacío()$\rangle$
+        \State \Return res
+        \\
+        \Statex \underline{Complejidad:} -
+        \Statex \underline{Justificación:} No hay ninguna restricción.
+    \end{algorithmic}
+    \end{algorithm}
+
+    \begin{algorithm}
+    \caption{\textbf{iGetStock}(\In{e}{$estr$}, \In{i}{$item$}) $\to$ $res$ : $cant$}
+    \begin{algorithmic}
+        \State res $\gets$ Significado($e.stock$, $i$)
+        \State \Return res
+        \\
+        \Statex \underline{Complejidad:} $\mathcal{O}(log(I))$
+        \Statex \underline{Justificación:} La complejidad de la operación $Significado$ sobre un $diccLog$ es $\mathcal{O}(log(n))$. En este caso $n$ es la cantidad de items ya que en el peor caso el stock de este puesto tiene por todos los items del festival.
+    \end{algorithmic}
+    \end{algorithm}
+
+    \begin{algorithm}
+    \caption{\textbf{iGetDescuento}(\In{e}{$estr$}, \In{i}{$item$}, \In{c}{$cant$}) $\to$ $res$ : $nat$}
+    \begin{algorithmic}
+    \If{Definido?($e.promos$, $i$)}  \Comment{$\mathcal{O}(log(I))$}
+        \State descuentos $\gets$ Significado($e.promos$, $i$)  \Comment{$\mathcal{O}(log(I))$}
+        \If{$c$ $>$ Longitud($descuentos$)}  \Comment{$\mathcal{O}(1)$}
+            \State res $\gets$ Ultimo($descuentos$)  \Comment{$\mathcal{O}(1)$}
+        \Else
+            \State res $\gets$ descuentos[$c$]  \Comment{$\mathcal{O}(1)$}
+        \EndIf
+    \Else
+        \State res $\gets$ 0  \Comment{$\mathcal{O}(1)$}
+    \EndIf
+    \State \Return res
+    \\
+    \Statex \underline{Complejidad:} $\mathcal{O}(log(I))$
+    \Statex \underline{Justificación:} En primer lugar, no hay ningún ciclo. En segundo lugar, salvo $Definido$ y $Significado$, que son $\mathcal{O}(log(n))$ sobre un $diccLog$, las demás operaciones son $\mathcal{O}(1)$. Luego, en el peor caso esto es $\mathcal{O}(log(I) + log(I) + 1 + 1) = \mathcal{O}(log(I))$.
+    \end{algorithmic}
+    \end{algorithm}
+
+    \begin{algorithm}
+    \caption{\textbf{iGetGastoPorPersonaEnPuesto}(\In{e}{$estr$}, \In{p}{$persona$}) $\to$ $res$ : $nat$}
+    \begin{algorithmic}
+    \If{Definido?($e.gastosPorPersonaEnPuesto$, $p$)}  \Comment{$\mathcal{O}(log(A))$}
+        \State res $\gets$ Significado($e.gastosPorPersonaEnPuesto$, $p$)  \Comment{$\mathcal{O}(log(A))$}
+    \Else
+        \State res $\gets$ 0  \Comment{$\mathcal{O}(1)$}
+    \EndIf
+    \State \Return res
+    \\
+    \Statex \underline{Complejidad:} $\mathcal{O}(log(A))$
+    \Statex \underline{Justificación:} En el peor caso queda $\mathcal{O}(log(A) + log(A)) = \mathcal{O}(log(A))$
+    \end{algorithmic}
+    \end{algorithm}
+
+    \begin{algorithm}
+    \caption{\textbf{iRegistrarCompraEnPuesto}(\Inout{e}{$estr$}, \In{p}{$persona$}, \In{i}{$item$}, \In{c}{$cant$})}
+    \begin{algorithmic}
+    \State total $\gets$ iCalcularTotal($e$, $i$, $c$)  \Comment{$\mathcal{O}(log(I))$}
+    \If{Definido?($e.gastosPorPersonaEnPuesto$, $p$)}  \Comment{$\mathcal{O}(log(A))$}
+        \State total $\gets$ total $+$ Significado($e.gastosPorPersonaEnPuesto$, $p$) \Comment{$\mathcal{O}(log(A))$}
+    \EndIf
+    \State Definir($e.gastosPorPersonaEnPuesto$, $p$, $total$)  \Comment{$\mathcal{O}(log(A))$}
+    \State stock $\gets$ Significado($e.stock$, $i$) - c  \Comment{$\mathcal{O}(log(I))$}
+    \State Definir($e.stock$, $i$, $stock$)  \Comment{$\mathcal{O}(log(I))$}
+    \\
+    \Statex \underline{Complejidad:} $\mathcal{O}(log(A)+log(I))$
+    \Statex \underline{Justificación:} Si sumamos en el peor caso quedaría: $\mathcal{O}(3 \times log(A)+3 \times log(I)) = \mathcal{O}(log(A)+log(I))$
+    \end{algorithmic}
+    \end{algorithm}
+
+    \begin{algorithm}
+    \caption{\textbf{iHackearPuesto}(\Inout{e}{$estr$}, \In{p}{$persona$}, \In{i}{$item$}}
+    \begin{algorithmic}
+    \State stock $\gets$ Significado($e.stock$, $i$) + 1 \Comment{$\mathcal{O}(log(I))$}
+    \State precio $\gets$ Significado($e.menu$, $i$)  \Comment{$\mathcal{O}(log(I))$}
+    \State gasto $\gets$ Significado($e.gastoPorPersonaEnPuesto$, $p$) - precio  \Comment{$\mathcal{O}(log(A))$}
+    \State Definir($e.stock$, $i$, $stock$)  \Comment{$\mathcal{O}(log(I))$}
+    \State Definir($e.gastoPorPersonaEnPuesto$, $p$, $gasto$)  \Comment{$\mathcal{O}(log(A))$}
+    \\
+    \Statex \underline{Complejidad:} $\mathcal{O}(log(A)+log(I))$
+    \Statex \underline{Justificación:} Si sumamos en el peor caso quedaría: $\mathcal{O}(2 \times log(A)+3 \times log(I)) = \mathcal{O}(log(A)+log(I))$
+    \end{algorithmic}
+    \end{algorithm}
+\end{Algoritmos}

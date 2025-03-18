@@ -1,0 +1,14 @@
+\begin{Representacion}
+  \begin{Estructura}{Lollapatuza}[estr]
+    \begin{Tupla}[estr]%
+      \tupItem{puestos}{diccLog($puestoid$, $puesto$)}, \\
+      \tupItem{personas}{conjLineal($persona$)}, \\
+      \tupItem{gastosPorPersona}{diccLog($persona$, $nat$)}, \\
+      \tupItem{personaQueMásGastó}{maxHeap($persona$)}, \\
+      \tupItem{puestosHackeablesPorPersona}{diccLog(\\
+        \tadIfIndent $persona$, diccLog($item$, diccLog($puestoid$, $nat$))\\
+        )}
+    \end{Tupla}
+  \end{Estructura}
+
+\end{Representacion}

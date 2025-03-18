@@ -1,0 +1,141 @@
+\begin{Interfaz}
+  \textbf{parámetros formales}\hangindent=2\parindent\\
+  \parbox{1.7cm}{\textbf{géneros}}$\alpha$\\
+  \parbox[t]{1.7cm}{\textbf{función}}\parbox[t]{.5\textwidth-\parindent-1.7cm}{%
+    \InterfazFuncion{$\bullet =_{\alpha} \bullet$}{\In{a_1}{$\alpha$}, \In{a_2}{$\alpha$}}{bool}
+    {$res \igobs (a_1 =_{\alpha} a_2)$}
+    [$\Theta(equal(a_1, a_2))$]
+    [función de igualdad de $\alpha$'s]
+  }
+  \parbox[t]{1.7cm}{\textbf{función}}\parbox[t]{.5\textwidth-\parindent-1.7cm}{%
+    \InterfazFuncion{$\bullet <_{\alpha} \bullet$}{\In{a_1}{$\alpha$}, \In{a_2}{$\alpha$}}{bool}
+    {$res \igobs (a_1 <_{\alpha} a_2)$}
+    [$\Theta(a_1 <_{\alpha} a_2)$]
+    [función de comparación de $\alpha$'s]
+  }
+  \parbox[t]{1.7cm}{\textbf{función}}\parbox[t]{.5\textwidth-\parindent-1.7cm}{%
+    \InterfazFuncion{Copiar}{\In{a}{$\alpha$}}{$\alpha$}
+    {$res \igobs a$}
+    [$\Theta(copy(a))$]
+    [función de copia de $\alpha$'s]
+  }
+
+  \textbf{se explica con}: \tadNombre{ColaDePrioridad$(\alpha)$}
+
+  \textbf{géneros}: \TipoVariable{heap$(\alpha)$}.
+
+  \Titulo{Operaciones básicas de heap}
+
+  \InterfazFuncion{Vacío}{\In{min}{bool}}{estr}
+    [$true$]
+    {$res \igobs vacia$}
+    [$\mathcal{O}(1)$]
+    [genera un heap vacío. Si $min$ es verdadero, entonces es un $minHeap$, de lo contrario es un $maxHeap$.]
+
+  \InterfazFuncion{Encolar}{\Inout{h}{estr}, \In{a}{$\alpha$}}{}
+    [$h_0 \igobs h$]
+    {$h \igobs encolar(a, h_0)$}
+    [$\mathcal{O}(log(U) + copy(a))$]
+    [Agrega un elemento al heap.]
+    [El elemento $a$ se agrega por copia.]
+
+  \InterfazFuncion{Desencolar}{\Inout{h}{estr}}{}
+    [$h_0 \igobs h \wedge \neg vacia?(h)$]
+    {$h \igobs desencolar(h_0)$}
+    [$\mathcal{O}(log(U))$]
+    [Remueve el máximo/mínimo del heap.]
+
+  \InterfazFuncion{Próximo}{\In{h}{estr}}{$(\alpha)$}
+    [$\neg vacia?(h)$]
+    {$ alias(res \igobs proximo(h)) $}
+    [$\mathcal{O}(1)$]
+    [Devuelve el próximo elemento del heap. Será el máximo si es $maxHeap$ o el mínimo si es $minHeap$.]
+    [$res$ es modificable si $h$ lo es.]
+
+  \InterfazFuncion{Tamaño}{\In{h}{estr}}{$nat$}
+    [$true$]
+    {$res $\igobs$ long(h)$}
+    [$\mathcal{O}(1)$]
+    [Devuelve la cantidad de elementos en el heap.]
+
+  \InterfazFuncion{Pertenece}{\In{h}{estr}, \In{a}{$\alpha$}}{bool}
+    [$true$]
+    {$res \igobs esta?(a, h)$}
+    [$\mathcal{O}(log(U))$]
+    [Se fija si un elemento está en el heap.]
+
+  \InterfazFuncion{Borrar}{\Inout{h}{estr}, \In{a}{$\alpha$}}{}
+    [$h_0 \igobs h \wedge \neg esta?(a, h_0)$]
+    {$h \igobs borrar(a, h_0)$}
+    [$\mathcal{O}(log(U))$]
+    [Borra el elemento pasado como parámetro.]
+
+  \Titulo{Operaciones auxiliares de heap}
+
+  \InterfazFuncion{Insertar}{\Inout{h}{estr}, \Inout{n}{puntero($nodo$)}}{}
+    [$h \igobs h_0 \wedge n \igobs n_0$]
+    {el nodo $n$ se insertó en la primera posición libre manteniendo el izquierdismo y actualizando los punteros correspondientes.}
+    [$\mathcal{O}(log(U))$]
+    [Es una operación no exportada cuya única función es simplificar la lectura. Al final de esta operación no vale el invariante, debe entenderse como un reemplazo puramente sintáctico. Inserta un nuevo nodo en la primer posición libre respetando el izquierdismo.]
+
+  \InterfazFuncion{Buscar}{\In{n}{puntero($nodo$)}, \In{camino}{nat}}{puntero($nodo$)}
+    [$true$]
+    {$res$ es el último nodo no $NULL$ del camino.}
+    [$\mathcal{O}(log(U))$]
+    [Dado un número natural, lo descomponemos en binario y recorremos el árbol en la manera en que indica la representación binaria del número: hacia la izquierda si el dígito es 0, o hacia la derecha si es 1. Si nos tenemos que mover hacia la izquierda o la derecha pero llegamos a un $NULL$, entonces devolvemos el último nodo que no es $NULL$.]
+
+  \InterfazFuncion{SiftUp}{\Inout{h}{estr}, \Inout{n}{puntero($nodo$)}}{}
+    [$ h \igobs h_0 \wedge esta?(n, h_0) $]
+    {Rep($h$) $\wedge$ mismosElementos($h$, $h_0$)}
+    [$\mathcal{O}(log(U))$]
+    [Es una operación no exportada cuya única función es simplificar la lectura. Al comienzo de esta operación no vale el invariante, debe entenderse como un reemplazo puramente sintáctico. Luego de la inserción de un nodo, realiza el sift up hasta acomodarlo y que vuelva a valer el invariante de representación.]
+
+  \InterfazFuncion{SiftDown}{\Inout{h}{estr}}{}
+    [$ h \igobs h_0 $]
+    {Rep($h$) $\wedge$ mismosElementos($h$, $h_0$)}
+    [$\mathcal{O}(log(U))$]
+    [Es una operación no exportada cuya única función es simplificar la lectura. Al comienzo de esta operación no vale el invariante, debe entenderse como un reemplazo puramente sintáctico. Luego de que se removió el $proximo$ nodo, realiza el sift down para acomodar la nueva raíz a donde corresponda y que vuelva a valer el invariante de representación.]
+
+  \InterfazFuncion{Swap}{\Inout{padre}{puntero($nodo$)}, \Inout{hijo}{puntero($nodo$)}}{}
+    [$padre \igobs p_0 \wedge hijo \igobs h_0$]
+    {$(padre\to val \igobs h_0\to val) \wedge (hijo\to val \igobs p_0\to val)$}
+    [$\mathcal{O}(1)$]
+    [Intercambia los valores y los iteradores de dos nodos entre sí, manteniendo el invariante de que cada clave de $mapping$ apunta al nodo que efectivamente contiene como valor dicha clave. Como diccLog implementa un iterador bidireccional modificable, al hacer `Siguiente` tenemos el dato en la misma dirección de memoria, con lo cual al modificarlo estamos modificando también a dónde apunta el iterador, que es lo que queremos, ya que al cambiar la clave de nodo queremos actualizar el mapping para que ahora la clave apunte al nuevo nodo; y esto lo queremos hacer en tiempo constante.]
+
+  \InterfazFuncion{Cmp}{\In{h}{estr}, \In{a_1}{$\alpha$}, \In{a_2}{$\alpha$}}{bool}
+    [$true$]
+    {$ (h.min \wedge a_1 < a_2) \lor (\neg h.min \wedge a_1 > a_2) $}
+    [$\mathcal{O}(1)$]
+    [Realiza comparaciones entre valores dependiendo de si es min o max heap.]
+
+
+    \Titulo{Especificación de las operaciones utilizadas en la interfaz}
+    \begin{tad}
+        {\tadNombre{Cola de Prioridad Extendida($\alpha$)}}
+        \tadExtiende{\tadNombre{Cola de Prioridad($\alpha$)}}
+        \tadOtrasOperaciones
+            \tadOperacion{long}{colaPrior($\alpha$)}{nat}{}
+            \tadOperacion{está?}{$\alpha$, colaPrior($\alpha$)}{bool}{}
+            \tadOperacion{borrar}{$\alpha$/a, colaPrior($\alpha$)/c}{colaPrior($\alpha$)}{está?($a$, $c$)}
+        \tadAxiomas[]
+            \tadAxioma{long(c)}{
+                \IF vacía?(c)
+                THEN 0
+                ELSE 1 + long(desencolar(c))
+                FI
+            }
+            \tadAxioma{está?(a, c)}{
+                \IF vacía($c$)
+                THEN false
+                ELSE próximo($c$) = a $\lor$ está?($a$, desencolar($c$))
+                FI
+            }
+            \tadAxioma{borrar($a_2$, encolar($a_1$, $c$))}{
+                \IF $a_1$ = $a_2$
+                THEN $c$
+                ELSE encolar($a_1$, borrar($a_2$, $c$))
+                FI
+            }
+    \end{tad}
+
+\end{Interfaz}

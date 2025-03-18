@@ -1,0 +1,20 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/mnt/c/Users/Ariel/Desktop/UBA/Algortimos 2/Taller/AyED2-Labo05-Listas_enlazadas/taller_lista_enlazada/src/Lista.cpp
+Lista.h
+/mnt/c/Users/Ariel/Desktop/UBA/Algortimos 2/Taller/AyED2-Labo05-Listas_enlazadas/taller_lista_enlazada/src/Lista.h
+cassert
+-
+
+/mnt/c/Users/Ariel/Desktop/UBA/Algortimos 2/Taller/AyED2-Labo05-Listas_enlazadas/taller_lista_enlazada/src/Lista.h
+string
+-
+ostream
+-
+

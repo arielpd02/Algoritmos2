@@ -1,0 +1,8 @@
+C:/Users/Ariel/Desktop/UBA/Algortimos 2/Taller/AyED2-Labo04-Compilacion-Member_classes-Testing/cmake-build-debug/CMakeFiles/gtest.dir
+C:/Users/Ariel/Desktop/UBA/Algortimos 2/Taller/AyED2-Labo04-Compilacion-Member_classes-Testing/cmake-build-debug/CMakeFiles/gtest_main.dir
+C:/Users/Ariel/Desktop/UBA/Algortimos 2/Taller/AyED2-Labo04-Compilacion-Member_classes-Testing/cmake-build-debug/CMakeFiles/ej1.dir
+C:/Users/Ariel/Desktop/UBA/Algortimos 2/Taller/AyED2-Labo04-Compilacion-Member_classes-Testing/cmake-build-debug/CMakeFiles/ej2.dir
+C:/Users/Ariel/Desktop/UBA/Algortimos 2/Taller/AyED2-Labo04-Compilacion-Member_classes-Testing/cmake-build-debug/CMakeFiles/ej3.dir
+C:/Users/Ariel/Desktop/UBA/Algortimos 2/Taller/AyED2-Labo04-Compilacion-Member_classes-Testing/cmake-build-debug/CMakeFiles/solucion_testing.dir
+C:/Users/Ariel/Desktop/UBA/Algortimos 2/Taller/AyED2-Labo04-Compilacion-Member_classes-Testing/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/Ariel/Desktop/UBA/Algortimos 2/Taller/AyED2-Labo04-Compilacion-Member_classes-Testing/cmake-build-debug/CMakeFiles/rebuild_cache.dir

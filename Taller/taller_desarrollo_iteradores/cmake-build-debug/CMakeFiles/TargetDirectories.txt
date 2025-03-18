@@ -1,0 +1,6 @@
+/mnt/c/Users/Ariel/Desktop/UBA/Algortimos 2/Taller/taller_desarrollo_iteradores/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/mnt/c/Users/Ariel/Desktop/UBA/Algortimos 2/Taller/taller_desarrollo_iteradores/cmake-build-debug/CMakeFiles/edit_cache.dir
+/mnt/c/Users/Ariel/Desktop/UBA/Algortimos 2/Taller/taller_desarrollo_iteradores/cmake-build-debug/CMakeFiles/correrValgrind.dir
+/mnt/c/Users/Ariel/Desktop/UBA/Algortimos 2/Taller/taller_desarrollo_iteradores/cmake-build-debug/CMakeFiles/correrTests.dir
+/mnt/c/Users/Ariel/Desktop/UBA/Algortimos 2/Taller/taller_desarrollo_iteradores/cmake-build-debug/CMakeFiles/gtest_main.dir
+/mnt/c/Users/Ariel/Desktop/UBA/Algortimos 2/Taller/taller_desarrollo_iteradores/cmake-build-debug/CMakeFiles/gtest.dir

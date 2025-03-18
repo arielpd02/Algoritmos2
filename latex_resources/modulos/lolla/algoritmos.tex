@@ -1,0 +1,77 @@
+\begin{Algoritmos}
+    \begin{algorithm}
+    \caption{\textbf{iPersonaQueMasGasto}(\In{e}{$estr$}) $\to$ $res$ : $persona$}
+    \begin{algorithmic}
+        \State res $\gets$ $e.personaQueMasGasto$
+        \State \Return res
+        \\
+        \Statex \underline{Complejidad:} $\Theta(1)$
+        \Statex \underline{Justificación:} Es simplemente devolver el elemento de la estructura.
+    \end{algorithmic}
+    \end{algorithm}
+
+    \begin{algorithm}
+    \caption{\textbf{iPersonasEnSistema}(\In{e}{$estr$}) $\to$ $res$ : conjLineal($persona$)}
+    \begin{algorithmic}
+        \State res $\gets$ $e.personas$
+        \State \Return res
+        \\
+        \Statex \underline{Complejidad:} $\Theta(1)$
+        \Statex \underline{Justificación:} Es simplemente devolver el elemento de la estructura.
+    \end{algorithmic}
+    \end{algorithm}
+
+    \begin{algorithm}
+    \caption{\textbf{iGastoTotalPorPersona}(\In{e}{$estr$}, \In{p}{$persona$}) $\to$ $res$ : conjLineal($persona$)}
+    \begin{algorithmic}
+        \If{Definido?($e.gastosPorPersona$, $p$)}  \Comment{$\mathcal{O}(log(A))$}
+            \State res $\gets$ Significado($p$, $e.gastosPorPersona$)  \Comment{$\mathcal{O}(log(A))$}
+        \Else
+            \State res $\gets$ 0  \Comment{$\mathcal{O}(1)$}
+        \EndIf
+        \State \Return res
+        \\
+        \Statex \underline{Complejidad:} $\mathcal{O}(log(A))$
+        \Statex \underline{Justificación:} En el peor caso tenemos $\mathcal{O}(log(A) + log(A)) = \mathcal{O}(log(A))$
+    \end{algorithmic}
+    \end{algorithm}
+
+    \begin{algorithm}
+    \caption{\textbf{iRegistrarCompra}(\Inout{e}{$estr$}, \In{a}{$persona$}, \In{p}{$puestoid$} \In{i}{$item$}, \In{c}{$cant$})}
+    \begin{algorithmic}
+        \State // Registramos la compra en el puesto
+        \State puesto $\gets$ Significado($e.puestos$, $p$)  \Comment{$\mathcal{O}(log(P))$}
+        \State iRegistrarCompraEnPuesto($puesto$, $a$, $i$, $c$)  \Comment{$\mathcal{O}(log(A)+log(I))$}
+        \\
+        \State // Nos fijamos y registramos si la compra es hackeable
+        \State huboDescuento $\gets$ iGetDescuento($puesto$, $i$, $c$) $>$ 0  \Comment{$\mathcal{O}(log(I))$}
+        \If{huboDescuento}  \Comment{$\mathcal{O}(1)$}
+            \State itemsHackeables $\gets$ Vacio()  \Comment{$\mathcal{O}(1)$}
+            \If{Definido?($e.puestosHackeablesPorPersona$, $a$)} \Comment{$\mathcal{O}(log(A))$}
+                \State itemsHackeables $\gets$ Significado($e.puestosHackeablesPorPersona$, $a$) \Comment{$\mathcal{O}(log(A))$}
+            \EndIf
+            \State puestosHackeables $\gets$ Vacio() \Comment{$\mathcal{O}(1)$}
+            \If{Definido?($itemsHackeables$, $i$)} \Comment{$\mathcal{O}(log(I))$}
+                \State puestosHackeables $\gets$ Significado($itemsHackeables$, $i$) \Comment{$\mathcal{O}(log(I))$}
+            \EndIf
+            \State hackeosPosibles $\gets$ 0 \Comment{$\mathcal{O}(1)$}
+            \If{Definido?($puestosHackeables$, $puestoid$)} \Comment{$\mathcal{O}(log(P))$}
+                \State hackeosPosibles $\gets$ Significado($puestosHackeables$, $puestoid$) \Comment{$\mathcal{O}(log(P))$}
+            \EndIf
+            \State Definir($puestosHackeables$, $puestoid$, $hackeosPosibles + 1$) \Comment{$\mathcal{O}(log(P))$}
+            \State Definir($itemsHackeables$, $i$, $puestosHackeables$) \Comment{$\mathcal{O}(log(I))$}
+            \State Definir($e.puestosHackeablesPorPersona$, $a$, $itemsHackeables$) \Comment{$\mathcal{O}(log(A))$}
+        \EndIf
+        \\
+        \State // Procesamos el gasto por persona
+        \State total $\gets$ iCalcularTotal($puesto$, $i$, $c$) \Comment{$\mathcal{O}(log(I))$}
+        \If{Definido?($e.gastoPorPersona$, $a$)} \Comment{$\mathcal{O}(log(A))$}
+            \State total $\gets$ total + Significado($e.gastoPorPersona$, $a$) \Comment{$\mathcal{O}(log(A))$}
+        \EndIf
+        \State Definir($e.gastoPorPersona$, $a$, $total$)  \Comment{$\mathcal{O}(log(A))$}
+        \\
+        \Statex \underline{Complejidad:} $\mathcal{O}(log(P) + log(A) + log(I))$
+        \Statex \underline{Justificación:} Si sumamos el peor caso posible (cuando hubo descuento y tanto la persona, como el item, como el puesto están definidos en la estructura; y además la persona ya había realizado una compra), nos quedaría $\mathcal{O}(4 \times log(P) + 7 \times log(A) + 6 \times log(I) + 4) = \mathcal{O}(log(P) + log(A) + log(I))$
+    \end{algorithmic}
+    \end{algorithm}
+\end{Algoritmos}

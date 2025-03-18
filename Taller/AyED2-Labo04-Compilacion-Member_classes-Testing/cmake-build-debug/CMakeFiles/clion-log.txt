@@ -1,0 +1,4 @@
+"C:\Program Files\JetBrains\CLion 2022.2.1\bin\cmake\win\bin\cmake.exe" -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - MinGW Makefiles" -S "C:\Users\Ariel\Desktop\UBA\Algortimos 2\Taller\AyED2-Labo04-Compilacion-Member_classes-Testing" -B "C:\Users\Ariel\Desktop\UBA\Algortimos 2\Taller\AyED2-Labo04-Compilacion-Member_classes-Testing\cmake-build-debug"
+-- Configuring done
+-- Generating done
+-- Build files have been written to: C:/Users/Ariel/Desktop/UBA/Algortimos 2/Taller/AyED2-Labo04-Compilacion-Member_classes-Testing/cmake-build-debug

@@ -1,0 +1,36 @@
+\begin{Representacion}
+  
+  \begin{Estructura}{heap$(\alpha)$}[estr]
+    \begin{Tupla}[estr]
+      \tupItem{raíz}{nodo*},
+      \tupItem{ultimo}{nat},
+      \tupItem{tamaño}{nat},
+      \tupItem{min}{bool},
+      \tupItem{mapping}{diccLog($\alpha$, $\langle$ $puntero:$ nodo*, $freq:$ $nat\rangle$)}
+    \end{Tupla}
+
+    \begin{Tupla}[nodo]
+      \tupItem{izq}{nodo*},
+      \tupItem{der}{nodo*},
+      \tupItem{padre}{nodo*},
+      \tupItem{val}{$\alpha$*}
+      \tupItem{it}{itDicc($\alpha$, $\langle$ $puntero:$ nodo*, $freq:$ $nat\rangle$)}
+    \end{Tupla}
+
+  \end{Estructura}
+
+  \Rep[estr][e]{\\
+      \textbf{sin claves repetidas:} \#claves(secuADicc($d$.claves)) $=$ long($d$.claves) $\land$  \\
+      long($d$.claves) = long($d$.significados)}
+
+  ~
+
+  \AbsFc[estr]{colaPrior($\alpha$)}[e]{
+      \IF e.ultimo = 0
+      THEN vacía
+      ELSE 
+      definir(prim($d$).claves, prim($d$).significado, 
+              Abs((fin($d$.claves), fin($d$.significados))) FI}
+
+
+\end{Representacion}

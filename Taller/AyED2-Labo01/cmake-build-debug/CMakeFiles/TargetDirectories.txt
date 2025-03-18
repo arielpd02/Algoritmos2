@@ -1,0 +1,6 @@
+/mnt/c/Users/Ariel/Desktop/UBA/Algortimos 2/Taller/AyED2-Labo01/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/mnt/c/Users/Ariel/Desktop/UBA/Algortimos 2/Taller/AyED2-Labo01/cmake-build-debug/CMakeFiles/edit_cache.dir
+/mnt/c/Users/Ariel/Desktop/UBA/Algortimos 2/Taller/AyED2-Labo01/cmake-build-debug/CMakeFiles/gtest_main.dir
+/mnt/c/Users/Ariel/Desktop/UBA/Algortimos 2/Taller/AyED2-Labo01/cmake-build-debug/CMakeFiles/gtest.dir
+/mnt/c/Users/Ariel/Desktop/UBA/Algortimos 2/Taller/AyED2-Labo01/cmake-build-debug/CMakeFiles/tests_ejercitacion.dir
+/mnt/c/Users/Ariel/Desktop/UBA/Algortimos 2/Taller/AyED2-Labo01/cmake-build-debug/CMakeFiles/tests_algobot.dir
